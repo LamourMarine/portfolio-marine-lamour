@@ -1,25 +1,31 @@
 <template>
-  <nav>
-    <ul>
-      <li v-if="currentSection !== 'Home'">
-        <a href="#" @click.prevent="changeSection('Home')">Accueil</a>
-      </li>
-      <li v-if="currentSection !== 'About'">
-        <a href="#" @click.prevent="changeSection('About')">À propos</a>
-      </li>
-      <li v-if="currentSection !== 'Projects'">
-        <a href="#" @click.prevent="changeSection('Projects')">Projets</a>
-      </li>
-      <li v-if="currentSection !== 'Contact'">
-        <a href="#" @click.prevent="changeSection('Contact')">Contact</a>
-      </li>
-    </ul>
-  </nav>
+        <nav>
+            <ul>
+                <li v-for="section in sections" :key="section.name">
+                <a href="#" @click.prevent="changeSection(section.name)">
+                <span v-if="currentSection === section.name" class="dot"></span>
+                    <span v-else>{{ section.label }}</span>
+                </a>
+                </li>
+            </ul>
+        </nav>
 </template>
 
 <script>
 export default {
   props: ['currentSection'],
+  emits: ['change-section'],
+  data() {
+    return {
+        sections: [
+            { name: 'Home', label:'Home'},
+            { name: 'StackTechnique', label: 'Stack Technique'},
+            { name: 'About', label: 'A propos'},
+            { name: 'Projects', label: 'Projets'},
+            { name: 'Contact', label: 'Contact'},
+        ],
+    }
+  },
   methods: {
     changeSection(section) {
       this.$emit('change-section', section)
@@ -29,19 +35,22 @@ export default {
 </script>
 
 <style scoped>
-nav {
-  position: fixed;
-  top: 35%;
-  left: 20px;
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
 }
 
-ul {
+nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+}
+
+nav li {
+  margin: 5px 0;
 }
 
 a {
@@ -54,6 +63,6 @@ a {
 }
 
 a:hover {
-  color: #42b883;
+  color: #1B998B;
 }
 </style>
