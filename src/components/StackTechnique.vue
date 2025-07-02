@@ -28,6 +28,7 @@
   padding: 20px 40px 0 40px; /* un peu d'espace en haut et sur les côtés */
   margin: 0;
   font-family: 'Inter', sans-serif; /* ou ta police principale */
+  text-decoration: underline;
 }
 
 </style>
