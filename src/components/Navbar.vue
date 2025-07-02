@@ -11,26 +11,36 @@
         </nav>
 </template>
 
-<script>
-export default {
-  props: ['currentSection'],
-  emits: ['change-section'],
-  data() {
-    return {
-        sections: [
-            { name: 'Home', label:'Home'},
-            { name: 'StackTechnique', label: 'Stack Technique'},
-            { name: 'About', label: 'A propos'},
-            { name: 'Projects', label: 'Projets'},
-            { name: 'Contact', label: 'Contact'},
-        ],
-    }
-  },
-  methods: {
-    changeSection(section) {
-      this.$emit('change-section', section)
-    }
-  }
+<script  lang="ts" setup>
+import { defineProps, defineEmits, ref } from 'vue'
+
+//Définir les types de props
+interface Section {
+  name: string
+  label: string
+}
+
+const props = defineProps<{
+  currentSection: string
+}>()
+
+//Définir les événements émis
+const emit = defineEmits<{
+  (e: 'change-section', section: string): void
+}>()
+
+//Définir les données internes (équivalent data)
+const sections = ref<Section[]>([
+  { name: 'Home', label: 'Home' },
+  { name: 'StackTechnique', label: 'Stack Technique' },
+  { name: 'About', label: 'A propos' },
+  { name: 'Projects', label: 'Projets' },
+  { name: 'Contact', label: 'Contact' },
+])
+
+//Méthode pour changer la section (équivalent methods)
+function changeSection(section: string) {
+  emit('change-section', section)
 }
 </script>
 

@@ -5,8 +5,6 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: 'Contact'
-}
+<script lang="ts" setup>
+
 </script>

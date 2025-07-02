@@ -1,12 +1,142 @@
 <template>
-  <section>
+  <div class="container">
     <h2>Contact</h2>
-    <p>Ta section contact ici.</p>
-  </section>
+    <form @submit.prevent="submitForm">
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <input
+        type="text"
+        id="name"
+        v-model="form.name"
+        required
+        title="Merci de remplir votre nom."
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+        type="email"
+        id="email"
+        v-model="form.email"
+        required
+        title="Merci d'e remplir votre email."
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea
+        id="message"
+        v-model="form.message"
+        required
+        title="Merci d'écrire votre message."
+        ref="messageTextarea"
+        @input="adjustHeight"
+        ></textarea>
+      </div>
+
+      <div class="button-wrapper">
+      <button type="submit">Envoyer</button>
+      </div>
+    </form>
+  </div>
 </template>
 
-<script>
-export default {
-  name: 'Contact'
+<script lang="ts" setup>
+import { reactive, ref, onMounted } from 'vue'
+import emailjs from '@emailjs/browser'
+
+const serviceID = 'service_qm1zfne'
+const templateID = 'template_1v6fqyt'
+const publicKey = 'OPvAJTKnR26-p15GM'
+
+const submitForm = () => {
+  const templateParams = {
+    name: form.name,
+    email: form.email,
+    message: form.message,
+  }
+
+  emailjs
+    .send(serviceID, templateID, templateParams, publicKey)
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text)
+      alert('Message envoyé avec succès !')
+    })
+    .catch((error) => {
+      console.error('FAILED...', error)
+      alert('Une erreur est survenue.')
+    })
 }
+
+//Définition d'un type pour le formulaire
+interface ContactForm {
+  name: string
+  email: string
+  message: string
+}
+
+//Creation d'un ojet reactif avec valeurs initiales
+const form = reactive<ContactForm>({
+  name: '',
+  email: '',
+  message: ''
+})
+
+const messageTextarea = ref<HTMLTextAreaElement | null>(null)
+
+function adjustHeight(){
+  if (!messageTextarea.value) return
+  messageTextarea.value.style.height = 'auto' //reset la hauteur
+  messageTextarea.value.style.height = messageTextarea.value.scrollHeight + 'px'  //Ajuste à la hauteur ducontenu
+ }
+
 </script>
+
+<style scoped>
+h2 {
+  font-size: 2.25rem;
+  text-decoration: underline;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 400px;
+}
+
+.form-group input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+.button-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+input {
+  padding: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  background-color: azure;
+  color: #222;
+}
+
+textarea {
+  background-color: azure;
+  color: #222;
+  height: 200px;
+}
+</style>
