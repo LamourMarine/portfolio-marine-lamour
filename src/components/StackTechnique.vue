@@ -7,10 +7,8 @@
     </div>
 </template>
 
-<script>
-export default {
-  name: 'StackTechnique'
-}
+<script lang="ts" setup>
+
 </script>
 
 <style scoped>

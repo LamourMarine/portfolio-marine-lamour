@@ -51,7 +51,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #111; /* Fond noir partout */
+  background-color: #111; 
   color: white;
   font-family: 'Inter', sans-serif;
 }
@@ -59,21 +59,24 @@ html, body {
 
 .frame {
   background-color: #1a1a1a;
+  background: radial-gradient(ellipse at top right, #4c4c4cd6 0%, #111 100%);
   position: fixed;
-  inset: 1cm; /* marge intérieure de 1cm tout autour */
-  border: 2px solid white;
+  inset: 1cm; 
+  border: 1px solid white;
   box-sizing: border-box;
   z-index: 0;
+  display: flex;
 }
 
 #app {
   display: flex;
   padding: 20px;
   height: 100vh;
-  width: 100vw; /* Prend toute la largeur */
+  width: 100vw; 
   text-align: left;
   position: relative;
   z-index: 1;
+
 }
 
 
@@ -97,13 +100,8 @@ header {
 }
 
 .sidebar {
-  position: fixed;
-  top: 26%;
-  left: 75px;
-  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   gap: 80px;
   color: white;
