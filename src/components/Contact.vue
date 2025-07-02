@@ -9,7 +9,7 @@
         id="name"
         v-model="form.name"
         required
-        title="Merci de remplir votre nom."
+        title="Merci de renseigner votre nom."
         />
       </div>
 
@@ -20,7 +20,7 @@
         id="email"
         v-model="form.email"
         required
-        title="Merci d'e remplir votre email."
+        title="Merci de renseigner votre email."
         />
       </div>
 
