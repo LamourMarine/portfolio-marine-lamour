@@ -100,11 +100,14 @@ function adjustHeight(){
 h2 {
   font-size: 2.25rem;
   text-decoration: underline;
+  font-weight: 100;
+  font-size: 2.5rem;
 }
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 118%;
 }
 
 .form-group {
@@ -142,3 +145,4 @@ textarea {
   height: 200px;
 }
 </style>
+

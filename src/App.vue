@@ -98,7 +98,7 @@ header {
 
  h1 {
   font-weight: 100;
-  font-size: 60px;
+  font-size: 85px;
   font-family: 'Inter', sans-serif;  margin: 0;
   padding: 0;
   display: flex;
@@ -107,6 +107,7 @@ header {
 .tagline {
   margin-top: 5px;
   font-weight: 400;
+  font-size: 20px;
 }
 
 .sidebar {

@@ -19,11 +19,11 @@
 .home-aboutme {
   position: fixed;
   bottom: 80px;
-  right: 80px;
-  max-width: 260px; /* ou ce que tu préfères */
-  font-size: 1rem;
+  right: 50px;
+  max-width: 30%; /* ou ce que tu préfères */
+  font-size: 1.5rem;
   color: white;
-  line-height: 1.2;       /* plus serré verticalement */
+  line-height: 1.5;       /* plus serré verticalement */
  
 }
 </style>
