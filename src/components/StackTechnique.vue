@@ -19,15 +19,24 @@
 </template>
 
 <script lang="ts" setup>
+import vueLogo from '@/assets/Vue.js_Logo_2.svg.png'
+import tsLogo from '@/assets/typescript.svg'
+import cssLogo from '@/assets/css3.png'
+import tailwindLogo from '@/assets/tailwind-css-logo-png_seeklogo-354675-removebg-preview.png'
+import phpLogo from '@/assets/kisspng-web-development-php-software-developer-web-applica-create-5ad11121794b05.5974879215236508494968-removebg-preview.png'
+import symfonyLogo from '@/assets/symfony-badge-icon-lg.png'
+import mysqlLogo from '@/assets/images-removebg-preview.png'
+import postgresLogo from '@/assets/PostgreSQL-Logo.wine.png'
+
 const technologies = [
-    { name: 'Vue.js', icon: 'src/assets/Vue.js_Logo_2.svg.png' },
-    { name: 'TypeScript', icon: 'src/assets/typescript.svg' },
-    { name: 'CSS', icon: 'src/assets/css3.png' },
-    { name: 'Tailwind', icon: 'src/assets/tailwind-css-logo-png_seeklogo-354675-removebg-preview.png' }, 
-    { name: 'PHP', icon: 'src/assets/kisspng-web-development-php-software-developer-web-applica-create-5ad11121794b05.5974879215236508494968-removebg-preview.png' }, 
-    { name: 'Symfony', icon: 'src/assets/symfony-badge-icon-lg.png' },
-    { name: 'MySQL', icon: 'src/assets/images-removebg-preview.png' },
-    { name: 'PostgreSQL', icon: 'src/assets/PostgreSQL-Logo.wine.png' }
+  { name: 'Vue.js', icon: vueLogo },
+  { name: 'TypeScript', icon: tsLogo },
+  { name: 'CSS', icon: cssLogo },
+  { name: 'Tailwind', icon: tailwindLogo },
+  { name: 'PHP', icon: phpLogo },
+  { name: 'Symfony', icon: symfonyLogo },
+  { name: 'MySQL', icon: mysqlLogo },
+  { name: 'PostgreSQL', icon: postgresLogo }
 ]
 
 </script>
