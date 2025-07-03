@@ -2,9 +2,18 @@
     <div class="stack-container">
         <h1 class="title">Stack Technique</h1>
         <div class="tech-icons">
-            <div class="tech" v-for="tech in technologies" :key="tech.name">
-                <img :src="tech.icon" alt="tech.name" />
+          <div class="tech" v-for="tech in technologies" :key="tech.name">
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img :src="tech.icon" :alt="tech.name" />
+                </div>
+                <div class="card-back">
+                  <p>{{ tech.name }}</p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
     </div>
 </template>
@@ -48,9 +57,10 @@ const technologies = [
 .tech-icons {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 100px 40px;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 7rem;
+  max-width: 800px;
 }
 
 .tech {
@@ -74,4 +84,55 @@ const technologies = [
   max-width: 190px;
   max-height: 125px;
 }
+
+.card {
+  width: 120px;
+  height: 120px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.tech:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-front {
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-front img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.card-back {
+  background: #333;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
 </style>
