@@ -44,7 +44,7 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive, ref, onMounted } from 'vue'
+import { reactive, ref } from 'vue'
 import emailjs from '@emailjs/browser'
 
 const serviceID = 'service_qm1zfne'

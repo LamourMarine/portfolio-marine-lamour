@@ -20,9 +20,10 @@ interface Section {
   label: string
 }
 
-const props = defineProps<{
+const { currentSection } = defineProps<{
   currentSection: string
 }>()
+
 
 //Définir les événements émis
 const emit = defineEmits<{
