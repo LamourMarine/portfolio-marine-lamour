@@ -44,8 +44,8 @@ const technologies = [
 
 .title {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   font-weight: 100; 
   font-size: 2.5rem;
   padding: 20px 40px 0 40px;
