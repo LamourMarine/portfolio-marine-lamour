@@ -3,7 +3,9 @@
     <div id="app">
       <aside class="sidebar">
         <header>
-          <h1>Marine Lamour</h1>
+          <div class="header-names">
+            <h1><span>Marine</span> <span> Lamour</span></h1>
+          </div>          
           <p class="tagline">Développeuse web et web mobile</p>
         </header>
         <Navbar 
@@ -71,8 +73,8 @@ html, body {
 #app {
   display: flex;
   padding: 20px;
-  height: 100vh;
-  width: 100vw; 
+  /*height: 100vh;*/
+  width: 100vw;
   text-align: left;
   position: relative;
   z-index: 1;
@@ -81,10 +83,17 @@ html, body {
 
 
 header {
-  top: 40px;
-  left: 20px;
+  /*top: 40px;
+  left: 20px;*/
   z-index: 10;
   margin-bottom: 40px;
+}
+
+.header-names {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; 
+  align-items: center;
 }
 
  h1 {
@@ -92,6 +101,7 @@ header {
   font-size: 60px;
   font-family: 'Inter', sans-serif;  margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .tagline {
@@ -105,11 +115,13 @@ header {
   align-items: flex-start;
   gap: 80px;
   color: white;
+  width: 240px;
+  flex-shrink: 0;
 }
 
 
 main {
-  margin-left: 240px;
+  /*margin-left: 240px;*/
   padding: 20px;
   flex-grow: 1;
   overflow-y: auto;

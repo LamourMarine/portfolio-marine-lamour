@@ -88,9 +88,11 @@ const messageTextarea = ref<HTMLTextAreaElement | null>(null)
 
 function adjustHeight(){
   if (!messageTextarea.value) return
-  messageTextarea.value.style.height = 'auto' //reset la hauteur
-  messageTextarea.value.style.height = messageTextarea.value.scrollHeight + 'px'  //Ajuste à la hauteur ducontenu
- }
+  messageTextarea.value.style.height = '200px' //reset la hauteur
+  if (messageTextarea.value.scrollHeight > 200) {
+    messageTextarea.value.style.height = messageTextarea.value.scrollHeight + 'px';
+  }
+}
 
 </script>
 
