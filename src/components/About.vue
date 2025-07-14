@@ -28,7 +28,7 @@ import logoResume from '../assets/logoResume.png'
 const links = [
   { name: 'Linkedin', icon: logoLinkedin, url: 'https://www.linkedin.com/in/marine-lamour-8a1747278/'},
   { name: 'Github', icon: logoGithub, url: 'https://github.com/LamourMarine'},
-  { name: 'Resume', icon: logoResume }
+  { name: 'Resume', icon: logoResume, url: 'public/CV.pdf' }
 ]
 
 </script>
@@ -76,6 +76,7 @@ section {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  width: 130%;
 }
 
 img {
