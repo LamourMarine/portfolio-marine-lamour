@@ -22,7 +22,7 @@
 <script lang="ts" setup>
 
 const projects = [
-  {name: 'Projet 1', description: '', image: '', link: ''},
+  {name: 'Pokédex', description: '', image: 'src/assets/MockupPokedex.jpg', link: 'https://lamourmarine.github.io/test-technique/'},
   {name: 'Projet 2', description: '', image: '', link: ''},
   {name: 'Projet 3', description: '', image: '', link: ''},
   {name: 'Projet 4', description: '', image: '', link: ''},
@@ -59,10 +59,12 @@ const projects = [
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
+  align-items: stretch;
 }
 
 .project-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: white;
   border-radius: 12px;
   padding: 1rem;
@@ -70,10 +72,19 @@ const projects = [
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-decoration: none;
   color: inherit;
+  overflow: hidden;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 </style>
