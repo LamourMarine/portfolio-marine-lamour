@@ -3,10 +3,11 @@
     <div class="section-content">
       <h1 class="title">À propos de moi</h1>
         <div class="about-text">
-        Je m'appelle Marine, développeuse web passionnée par la création d'expériences utilisateurs performantes et esthétiques.<br>
-        Après une formation en développement web, je me spécialise aujourd'hui dans le front-end avec Vue.js et TypeScript.<br>
-        Je suis constamment en apprentissage, motivée par la résolution de problèmes techniques et la création de solutions durables.<br>
-        N'hésitez pas à me contacter ou à découvrir mes projets dans la section dédiée.<br>
+        Je m'appelle Marine, développeuse web passionnée par la création d'expériences utilisateurs performantes et esthétiques.
+      Après une formation en développement web, je me spécialise aujourd'hui dans le front-end avec Vue.js et TypeScript, tout en ayant acquis des bases en développement backend.
+      Je suis particulièrement intéressée par la conception d'API et la gestion de bases de données, et je continue à approfondir mes compétences dans ce domaine.
+      Je suis constamment en apprentissage, motivée par la résolution de problèmes techniques et la création de solutions durables.
+      N'hésitez pas à me contacter ou à découvrir mes projets dans la section dédiée.
         </div>
           <div class="contact-links">
             <div class="card" v-for="link in links" :key="link.name">
@@ -58,7 +59,7 @@ section {
   padding: 20px 40px 0 40px;
   margin-top: 10px;
   margin-left: 215px;
-  margin-bottom: 170px;
+  margin-bottom: 125px;
   font-family: 'Inter', sans-serif;
   text-decoration: underline; 
   color: white;
