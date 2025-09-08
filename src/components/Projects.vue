@@ -2,27 +2,39 @@
   <section class="project-container">
     <h1 class="title">Projets</h1>
     <div class="projects-grid">
-            <a 
-        v-for="project in projects" 
-        :key="project.name" 
-        :href="project.link" 
-        target="_blank" 
-        class="project-card"
-      >
-        <div class="card-content">
+      <div v-for="project in projects" :key="project.name" class="project-wrapper">
+        <!-- Card cliquable uniquement -->
+        <a :href="project.link" target="_blank" class="project-card">
           <img :src="project.image" :alt="project.name" class="card-image" />
-          <h2 class="card-title">{{ project.name }}</h2>
-          <p class="card-desc">{{ project.description }}</p>
+        </a>
+
+        <!-- Titre et description sous la card -->
+        <div class="project-info">
+          <h2 class="project-title">{{ project.name }}</h2>
+          <ul v-if="Array.isArray(project.description)" class="project-desc">
+            <li v-for="(item, index) in project.description" :key="index">{{ item }}</li>
+          </ul>
+          <p v-else class="project-desc">{{ project.description }}</p>
         </div>
-      </a>
+      </div>
     </div>
   </section>
 </template>
 
 <script lang="ts" setup>
+import mockupPokedex from '@/assets/MockupPokedex.jpg'
 
 const projects = [
-  {name: 'Pokédex', description: '', image: 'src/assets/MockupPokedex.jpg', link: 'https://lamourmarine.github.io/test-technique/'},
+  {
+    name: 'Pokédex App',
+    description: [
+      'Consommer une API externe',
+      'Travailler l’intégration HTML / CSS',
+      'Gérer de la logique en JS'
+    ],
+    image: mockupPokedex,
+    link: 'https://lamourmarine.github.io/test-technique/'
+  },
   {name: 'Projet 2', description: '', image: '', link: ''},
   {name: 'Projet 3', description: '', image: '', link: ''},
   {name: 'Projet 4', description: '', image: '', link: ''},
@@ -30,7 +42,6 @@ const projects = [
   {name: 'Projet 6', description: '', image: '', link: ''}
 ]
 </script>
-
 <style scooped>
 
 .project-container {
@@ -63,14 +74,13 @@ const projects = [
 }
 
 .project-card {
-  display: flex;
-  flex-direction: column;
-  background: white;
+  display: block;
+  /*flex-direction: column;
+  background: white;*/
   border-radius: 12px;
-  padding: 1rem;
+  /*padding: 1rem;*/
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-decoration: none;
   color: inherit;
   overflow: hidden;
 }
@@ -85,6 +95,27 @@ const projects = [
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  /*margin-bottom: 1rem;*/
 }
+
+.project-info {
+  text-align: center; 
+  margin-top: 0.5rem; 
+}
+
+.project-title {
+  font-size: 1.2rem; 
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: #c7c7c7;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  list-style: disc inside;
+}
+
 </style>
