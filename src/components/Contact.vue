@@ -47,9 +47,9 @@
 import { reactive, ref } from 'vue'
 import emailjs from '@emailjs/browser'
 
-const serviceID = 'service_qm1zfne'
-const templateID = 'template_1v6fqyt'
-const publicKey = 'OPvAJTKnR26-p15GM'
+const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const submitForm = () => {
   const templateParams = {
