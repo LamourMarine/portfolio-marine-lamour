@@ -22,7 +22,8 @@
 </template>
 
 <script lang="ts" setup>
-import mockupPokedex from '@/assets/MockupPokedex.jpg'
+import mockupPokedex from '@/assets/MockupPokedex.jpg';
+import duSolAuPlafond from '@/assets/Du_sol_au_plafond.png'
 
 const projects = [
   {
@@ -35,7 +36,17 @@ const projects = [
     image: mockupPokedex,
     link: 'https://lamourmarine.github.io/test-technique/'
   },
-  {name: 'Projet 2', description: '', image: '', link: ''},
+
+  {name: 'Du Sol Au Plafond', 
+  description: [
+  'Développement d’un site vitrine moderne et responsive',
+  'Utilisation de React, Vite et Tailwind CSS',
+  'Mise en place d’un formulaire de contact avec EmailJS',
+  'Déploiement et gestion des variables d’environnement sur Netlify'
+]
+, image: duSolAuPlafond,
+ link: 'https://du-sol-au-plafond.netlify.app/'},
+
   {name: 'Projet 3', description: '', image: '', link: ''},
   {name: 'Projet 4', description: '', image: '', link: ''},
   {name: 'Projet 5', description: '', image: '', link: ''},
@@ -48,7 +59,7 @@ const projects = [
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 120px;
+  margin-left: 330px;
   color: white;
 }
 
@@ -83,6 +94,7 @@ const projects = [
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   color: inherit;
   overflow: hidden;
+  
 }
 
 .project-card:hover {
