@@ -1,4 +1,4 @@
-# Logs
+	# Logs
 logs
 *.log
 npm-debug.log*
@@ -28,3 +28,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+curl -k -X GET https://localhost/api/products \
+  -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3NjAwMTExNDcsImV4cCI6MTc2MDA5NzU0Nywicm9sZXMiOlsiUk9MRV9QUk9EVUNURVVSIiwiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoicHJvZHVjdGV1ckB0ZXN0LmNvbSJ9.XD2_WLHbTTOu0kY17OVfjYxhV3t031y_yZpPEJyUCwKaTJJP7BpyuGh7zwf7qt4VAV1ND7yurmlATF1jZO8QQDbOrMswgOXXAfpSDjjnixaMfYpkO2-fXloxDHiEctwmEaRCSsUinTiFDGCWK8DaVfPIdLF0sp3zOTRFK_2iuEzuu89b-B6UlSx_VCw4IjKuiK14DTzY5WW7d6YDUFtRW7mV5OQ79vLpP_fRNKPYaPYWu8jCmpabjyBh5zWYFmwxoVdkhOGsotimo-WpjEakEwTlxyWsQgKZw7Y_QgsLZv6L-IBFoFFYGRyMqDlW3KO2FTvAFfDof6mZOjuyBUupzA"
