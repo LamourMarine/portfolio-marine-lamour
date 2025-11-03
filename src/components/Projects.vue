@@ -65,7 +65,7 @@ const projects = [
     'Déploiement front-end sur Netlify'
   ],
   image: cantineVerte,
-  link: 'https://cantineverte.netlify.app/login'
+  link: 'https://cantineverte.netlify.app'
   }
 ];
 </script>
