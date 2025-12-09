@@ -5,18 +5,22 @@
         <header>
           <div class="header-names">
             <h1><span>Marine</span> <span> Lamour</span></h1>
-          </div>          
+          </div>
           <p class="tagline">Développeuse web et web mobile</p>
         </header>
-        <Navbar 
-          :current-section="currentSection" 
-          @change-section="currentSection = $event" 
+        <Navbar
+          :current-section="currentSection"
+          @change-section="currentSection = $event"
         />
       </aside>
 
       <main>
         <transition name="fade" mode="out-in">
-          <component :is="currentSectionComponent" :key="currentSection" />
+          <component
+            :is="currentSectionComponent"
+            :key="currentSection"
+            @change-section="currentSection = $event"
+          />
         </transition>
       </main>
     </div>
@@ -24,46 +28,45 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
-import Home from './components/Home.vue'
-import StackTechnique from './components/StackTechnique.vue'
-import About from './components/About.vue'
-import Projects from './components/Projects.vue'
-import Contact from './components/Contact.vue'
+import Navbar from "./components/Navbar.vue";
+import Home from "./components/Home.vue";
+import StackTechnique from "./components/StackTechnique.vue";
+import About from "./components/About.vue";
+import Projects from "./components/Projects.vue";
+import Contact from "./components/Contact.vue";
 
 export default {
   components: { Navbar, Home, StackTechnique, About, Projects, Contact },
   data() {
     return {
-      currentSection: 'Home', // section par défaut
-    }
+      currentSection: "Home", // section par défaut
+    };
   },
   computed: {
     currentSectionComponent() {
       // renvoie le composant à afficher selon la section active
-      return this.currentSection
-    }
-  }
-}
+      return this.currentSection;
+    },
+  },
+};
 </script>
 
 <style scoped>
-
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #111; 
+  background-color: #111;
   color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
-
 
 .frame {
   background-color: #1a1a1a;
   background: radial-gradient(ellipse at top right, #4c4c4cd6 0%, #111 100%);
   position: fixed;
-  inset: 1cm; 
+  inset: 1cm;
   border: 1px solid white;
   box-sizing: border-box;
   z-index: 0;
@@ -78,9 +81,7 @@ html, body {
   text-align: left;
   position: relative;
   z-index: 1;
-
 }
-
 
 header {
   /*top: 40px;
@@ -92,14 +93,15 @@ header {
 .header-names {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   align-items: center;
 }
 
- h1 {
+h1 {
   font-weight: 100;
   font-size: 85px;
-  font-family: 'Inter', sans-serif;  margin: 0;
+  font-family: "Inter", sans-serif;
+  margin: 0;
   padding: 0;
   display: flex;
 }
@@ -120,7 +122,6 @@ header {
   flex-shrink: 0;
 }
 
-
 main {
   /*margin-left: 240px;*/
   padding: 20px;
@@ -129,10 +130,12 @@ main {
 }
 
 /* Transition fade douce */
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.5s ease;
 }
-.fade-enter-from, .fade-leave-to {
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
 }
 </style>

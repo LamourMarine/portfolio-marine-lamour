@@ -12,7 +12,7 @@
 </template>
 
 <script  lang="ts" setup>
-import { defineProps, defineEmits, ref } from 'vue'
+import { ref } from 'vue'
 
 //Définir les types de props
 interface Section {
@@ -20,17 +20,16 @@ interface Section {
   label: string
 }
 
-const { currentSection } = defineProps<{
+const props = defineProps<{
   currentSection: string
 }>()
-
 
 //Définir les événements émis
 const emit = defineEmits<{
   (e: 'change-section', section: string): void
 }>()
 
-//Définir les données internes (équivalent data)
+//Définir les données internes
 const sections = ref<Section[]>([
   { name: 'Home', label: 'Home' },
   { name: 'StackTechnique', label: 'Stack Technique' },
