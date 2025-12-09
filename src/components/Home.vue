@@ -23,7 +23,7 @@
 
       <p class="home-availability">
         <span class="availability-dot"></span>
-        Recherche alternance CDA • Septembre 2025
+        Recherche alternance CDA • Decembre 2025
       </p>
     </div>
   </section>
