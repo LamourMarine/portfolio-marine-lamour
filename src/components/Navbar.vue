@@ -20,7 +20,7 @@ interface Section {
   label: string
 }
 
-const props = defineProps<{
+defineProps<{
   currentSection: string
 }>()
 
