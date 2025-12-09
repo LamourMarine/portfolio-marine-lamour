@@ -130,7 +130,7 @@ const otherProjects = [
     technologies: ["React", "Tailwind CSS", "Vite"],
     image: duSolAuPlafond,
     link: "https://du-sol-au-plafond.netlify.app/",
-    github: "https://github.com/LamourMarine/du-sol-au-plafond" // Ajoute ton lien
+    github: "https://github.com/LamourMarine/du-sol-au-plafond"
   },
 
   {
@@ -143,7 +143,7 @@ const otherProjects = [
     technologies: ["JavaScript", "HTML", "CSS"],
     image: mockupPokedex,
     link: "https://lamourmarine.github.io/test-technique/",
-    github: "https://github.com/LamourMarine/test-technique" // Ajoute ton lien
+    github: "https://github.com/LamourMarine/test-technique"
   }
 ];
 </script>

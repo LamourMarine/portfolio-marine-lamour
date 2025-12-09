@@ -146,14 +146,12 @@ const submitForm = async () => {
   }
 }
 
-// Définition d'un type pour le formulaire
 interface ContactForm {
   name: string
   email: string
   message: string
 }
 
-// Création d'un objet réactif avec valeurs initiales
 const form = reactive<ContactForm>({
   name: '',
   email: '',

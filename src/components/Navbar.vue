@@ -14,7 +14,6 @@
 <script  lang="ts" setup>
 import { ref } from 'vue'
 
-//Définir les types de props
 interface Section {
   name: string
   label: string
@@ -29,7 +28,6 @@ const emit = defineEmits<{
   (e: 'change-section', section: string): void
 }>()
 
-//Définir les données internes
 const sections = ref<Section[]>([
   { name: 'Home', label: 'Home' },
   { name: 'StackTechnique', label: 'Stack Technique' },

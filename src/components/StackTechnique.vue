@@ -75,7 +75,7 @@ const technologies = [
   max-width: 800px;
 }
 
-/* Wrapper pour contenir la card ET le nom mobile */
+/* Wrapper pour contenir la card et le nom mobile */
 .tech-wrapper {
   display: flex;
   flex-direction: column;

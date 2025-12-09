@@ -369,7 +369,7 @@ main {
 /* Petits mobiles comme iPhone 11 (375px) */
 @media (max-width: 400px) {
   .mobile-header h1 {
-    font-size: 32px; /* Plus petit pour iPhone 11 */
+    font-size: 32px;
   }
 
   .mobile-header .tagline {
@@ -377,12 +377,12 @@ main {
   }
 
   .sidebar {
-    width: 85%; /* Plus large sur petit écran */
+    width: 85%;
     padding: 20px;
   }
 
   #app {
-    padding: 0px; /* Encore moins de padding */
+    padding: 0px;
   }
 
   main {
