@@ -119,13 +119,13 @@ body {
 
 #app {
   display: flex;
-  flex-direction: row;
   padding: 20px;
   width: 100%;
   text-align: left;
   position: relative;
   z-index: 1;
 }
+
 
 /* Header mobile (affiché uniquement sur mobile) */
 .mobile-header {
@@ -250,12 +250,23 @@ main {
 /* Mobile */
 @media (max-width: 768px) {
   .frame {
-    inset: 10px;
+    inset: 0px;
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    overflow-x: hidden;
   }
 
   #app {
     flex-direction: column;
-    padding: 10px;
+    padding: 0px;
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box; 
   }
 
   .hamburger {
@@ -267,7 +278,9 @@ main {
     display: block;
     text-align: center;
     margin-bottom: 20px;
-    padding-top: 20px;
+    padding: 20px 15px 0 15px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .header-names-mobile {
@@ -318,8 +331,10 @@ main {
   }
 
   main {
-    padding: 10px;
+    padding: 0px;
     width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
   }
 }
 
@@ -335,6 +350,30 @@ main {
 
   .sidebar {
     width: 80%;
+  }
+}
+
+/* Petits mobiles comme iPhone 11 (375px) */
+@media (max-width: 400px) {
+  .mobile-header h1 {
+    font-size: 32px; /* Plus petit pour iPhone 11 */
+  }
+
+  .mobile-header .tagline {
+    font-size: 14px;
+  }
+
+  .sidebar {
+    width: 85%; /* Plus large sur petit écran */
+    padding: 20px;
+  }
+
+  #app {
+    padding: 0px; /* Encore moins de padding */
+  }
+
+  main {
+    padding: 0px;
   }
 }
 </style>

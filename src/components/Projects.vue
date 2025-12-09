@@ -445,8 +445,11 @@ const otherProjects = [
 /* Mobile */
 @media (max-width: 768px) {
   .project-container {
-    margin-left: 0;
+    margin: 0;
     padding: 20px 15px;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
   }
 
   .title {
