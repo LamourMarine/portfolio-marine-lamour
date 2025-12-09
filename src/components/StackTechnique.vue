@@ -2,17 +2,21 @@
     <div class="stack-container">
         <h1 class="title">Stack Technique</h1>
         <div class="tech-icons">
-          <div class="tech" v-for="tech in technologies" :key="tech.name">
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-front">
-                  <img :src="tech.icon" :alt="tech.name" />
-                </div>
-                <div class="card-back">
-                  <p>{{ tech.name }}</p>
+          <div class="tech-wrapper" v-for="tech in technologies" :key="tech.name">
+            <div class="tech">
+              <div class="card">
+                <div class="card-inner">
+                  <div class="card-front">
+                    <img :src="tech.icon" :alt="tech.name" />
+                  </div>
+                  <div class="card-back">
+                    <p>{{ tech.name }}</p>
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- Nom affiché directement sur mobile (en dehors du .tech) -->
+            <p class="tech-name-mobile">{{ tech.name }}</p>
           </div>
         </div>
     </div>
@@ -38,17 +42,16 @@ const technologies = [
   { name: 'MySQL', icon: mysqlLogo },
   { name: 'PostgreSQL', icon: postgresLogo }
 ]
-
 </script>
 
 <style scoped>
-
 .stack-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-left: 120px;
   color: white;
+  padding: 20px;
 }
 
 .title {
@@ -72,6 +75,13 @@ const technologies = [
   max-width: 800px;
 }
 
+/* Wrapper pour contenir la card ET le nom mobile */
+.tech-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .tech {
   background-color: #1a1a1a; 
   opacity: 0.8;
@@ -92,6 +102,12 @@ const technologies = [
 .tech img {
   max-width: 190px;
   max-height: 125px;
+}
+
+/* Nom mobile caché par défaut */
+.tech-name-mobile {
+  display: none;
+  margin: 0;
 }
 
 .card {
@@ -144,4 +160,138 @@ const technologies = [
   font-weight: bold;
 }
 
+/* ==================== RESPONSIVE ==================== */
+
+/* Tablette */
+@media (max-width: 1024px) {
+  .stack-container {
+    margin-left: 60px;
+  }
+
+  .title {
+    font-size: 2rem;
+    padding: 15px 30px 0 30px;
+  }
+
+  .tech-icons {
+    gap: 60px 30px;
+    margin-top: 5rem;
+  }
+
+  .tech {
+    width: 130px;
+    height: 130px;
+  }
+
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .stack-container {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    padding: 10px 20px 0 20px;
+    text-align: center;
+  }
+
+  .tech-icons {
+    gap: 40px 20px;
+    margin-top: 3rem;
+    max-width: 100%;
+  }
+
+  .tech-wrapper {
+    gap: 10px;
+  }
+
+  .tech {
+    width: 110px;
+    height: 110px;
+    background-color: #1a1a1a;
+    opacity: 1;
+  }
+
+  .card {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* Désactiver le flip sur mobile */
+  .card-inner {
+    transform: none !important;
+  }
+
+  .card-back {
+    display: none;
+  }
+
+  .card-front {
+    background: transparent;
+  }
+
+  /* Afficher le nom sous l'icône */
+  .tech-name-mobile {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+  }
+}
+
+/* Petits mobiles */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+    padding: 10px 10px 0 10px;
+  }
+
+  .tech-icons {
+    gap: 30px 15px;
+    margin-top: 2rem;
+  }
+
+  .tech {
+    width: 90px;
+    height: 90px;
+  }
+
+  .card {
+    width: 75px;
+    height: 75px;
+  }
+
+  .tech-name-mobile {
+    font-size: 0.85rem;
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 360px) {
+  .tech-icons {
+    gap: 20px 10px;
+  }
+
+  .tech {
+    width: 80px;
+    height: 80px;
+  }
+
+  .card {
+    width: 65px;
+    height: 65px;
+  }
+
+  .tech-name-mobile {
+    font-size: 0.8rem;
+  }
+}
 </style>

@@ -1,25 +1,52 @@
 <template>
   <div class="frame">
     <div id="app">
-      <aside class="sidebar">
-        <header>
+      <!-- Hamburger menu button (mobile only) -->
+      <button 
+        class="hamburger" 
+        @click="mobileMenuOpen = !mobileMenuOpen"
+        :class="{ active: mobileMenuOpen }"
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Header visible sur toutes les pages en mobile -->
+      <header class="mobile-header" v-if="isMobile">
+        <div class="header-names-mobile">
+          <h1><span>Marine</span> <span>Lamour</span></h1>
+        </div>
+        <p class="tagline">Développeuse web et web mobile</p>
+      </header>
+
+      <aside class="sidebar" :class="{ open: mobileMenuOpen }">
+        <header class="desktop-header">
           <div class="header-names">
-            <h1><span>Marine</span> <span> Lamour</span></h1>
+            <h1><span>Marine</span> <span>Lamour</span></h1>
           </div>
           <p class="tagline">Développeuse web et web mobile</p>
         </header>
         <Navbar
           :current-section="currentSection"
-          @change-section="currentSection = $event"
+          @change-section="handleSectionChange"
         />
       </aside>
+
+      <!-- Overlay pour fermer le menu mobile -->
+      <div 
+        v-if="mobileMenuOpen" 
+        class="overlay" 
+        @click="mobileMenuOpen = false"
+      ></div>
 
       <main>
         <transition name="fade" mode="out-in">
           <component
             :is="currentSectionComponent"
             :key="currentSection"
-            @change-section="currentSection = $event"
+            @change-section="handleSectionChange"
           />
         </transition>
       </main>
@@ -39,14 +66,31 @@ export default {
   components: { Navbar, Home, StackTechnique, About, Projects, Contact },
   data() {
     return {
-      currentSection: "Home", // section par défaut
+      currentSection: "Home",
+      mobileMenuOpen: false,
+      isMobile: false,
     };
   },
   computed: {
     currentSectionComponent() {
-      // renvoie le composant à afficher selon la section active
       return this.currentSection;
     },
+  },
+  methods: {
+    handleSectionChange(section) {
+      this.currentSection = section;
+      this.mobileMenuOpen = false;
+    },
+    checkMobile() {
+      this.isMobile = window.innerWidth <= 768;
+    },
+  },
+  mounted() {
+    this.checkMobile();
+    window.addEventListener("resize", this.checkMobile);
+  },
+  beforeUnmount() {
+    window.removeEventListener("resize", this.checkMobile);
   },
 };
 </script>
@@ -75,22 +119,27 @@ body {
 
 #app {
   display: flex;
+  flex-direction: row;
   padding: 20px;
-  /*height: 100vh;*/
-  width: 100vw;
+  width: 100%;
   text-align: left;
   position: relative;
   z-index: 1;
 }
 
-header {
-  /*top: 40px;
-  left: 20px;*/
+/* Header mobile (affiché uniquement sur mobile) */
+.mobile-header {
+  display: none;
+}
+
+/* Header desktop (dans la sidebar) */
+.desktop-header {
   z-index: 10;
   margin-bottom: 40px;
 }
 
-.header-names {
+.header-names,
+.header-names-mobile {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -104,6 +153,7 @@ h1 {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .tagline {
@@ -123,10 +173,51 @@ h1 {
 }
 
 main {
-  /*margin-left: 240px;*/
   padding: 20px;
   flex-grow: 1;
   overflow-y: auto;
+}
+
+/* Hamburger menu (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Overlay pour mobile */
+.overlay {
+  display: none;
 }
 
 /* Transition fade douce */
@@ -137,5 +228,113 @@ main {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+/* Tablette */
+@media (max-width: 1024px) {
+  .frame {
+    inset: 0.5cm;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .sidebar {
+    gap: 50px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .frame {
+    inset: 10px;
+  }
+
+  #app {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Afficher le header mobile */
+  .mobile-header {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .header-names-mobile {
+    justify-content: center;
+  }
+
+  .mobile-header h1 {
+    font-size: 40px;
+  }
+
+  .mobile-header .tagline {
+    font-size: 16px;
+  }
+
+  /* Cacher le header dans la sidebar sur mobile */
+  .desktop-header {
+    display: none;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: #1a1a1a;
+    z-index: 1000;
+    padding: 30px;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    gap: 40px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+  }
+
+  main {
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+/* Très petits mobiles */
+@media (max-width: 480px) {
+  .mobile-header h1 {
+    font-size: 32px;
+  }
+
+  .mobile-header .tagline {
+    font-size: 14px;
+  }
+
+  .sidebar {
+    width: 80%;
+  }
 }
 </style>
