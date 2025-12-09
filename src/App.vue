@@ -2,8 +2,8 @@
   <div class="frame">
     <div id="app">
       <!-- Hamburger menu button (mobile only) -->
-      <button 
-        class="hamburger" 
+      <button
+        class="hamburger"
         @click="mobileMenuOpen = !mobileMenuOpen"
         :class="{ active: mobileMenuOpen }"
         aria-label="Toggle menu"
@@ -35,9 +35,9 @@
       </aside>
 
       <!-- Overlay pour fermer le menu mobile -->
-      <div 
-        v-if="mobileMenuOpen" 
-        class="overlay" 
+      <div
+        v-if="mobileMenuOpen"
+        class="overlay"
         @click="mobileMenuOpen = false"
       ></div>
 
@@ -74,6 +74,20 @@ export default {
   computed: {
     currentSectionComponent() {
       return this.currentSection;
+    },
+  },
+  watch: {
+    currentSection() {
+      // Attendre que le DOM soit mis à jour
+      this.$nextTick(() => {
+        const mainElement = document.querySelector("main");
+        if (mainElement) {
+          mainElement.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }
+      });
     },
   },
   methods: {
@@ -125,7 +139,6 @@ body {
   position: relative;
   z-index: 1;
 }
-
 
 /* Header mobile (affiché uniquement sur mobile) */
 .mobile-header {
@@ -266,7 +279,7 @@ main {
     padding: 0px;
     width: 100vw;
     max-width: 100vw;
-    box-sizing: border-box; 
+    box-sizing: border-box;
   }
 
   .hamburger {
