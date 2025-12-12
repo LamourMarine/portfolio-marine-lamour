@@ -58,12 +58,11 @@
 import Navbar from "./components/Navbar.vue";
 import Home from "./components/Home.vue";
 import StackTechnique from "./components/StackTechnique.vue";
-import About from "./components/About.vue";
 import Projects from "./components/Projects.vue";
 import Contact from "./components/Contact.vue";
 
 export default {
-  components: { Navbar, Home, StackTechnique, About, Projects, Contact },
+  components: { Navbar, Home, StackTechnique, Projects, Contact },
   data() {
     return {
       currentSection: "Home",
@@ -179,7 +178,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 80px;
+  gap: 50px;
   color: white;
   width: 240px;
   flex-shrink: 0;

@@ -31,7 +31,6 @@ const emit = defineEmits<{
 const sections = ref<Section[]>([
   { name: 'Home', label: 'Home' },
   { name: 'StackTechnique', label: 'Stack Technique' },
-  { name: 'About', label: 'A propos' },
   { name: 'Projects', label: 'Projets' },
   { name: 'Contact', label: 'Contact' },
 ])
