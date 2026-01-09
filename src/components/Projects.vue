@@ -102,6 +102,7 @@
 import mockupPokedex from "@/assets/MockupPokedex.jpg";
 import duSolAuPlafond from "@/assets/Du_sol_au_plafond.png";
 import cantineVerte from "@/assets/Cantine_Verte.png";
+import horlogeApprentissage from "@/assets/Horloge-apprentissageQuiz.png";
 
 const featuredProject = {
   name: "Cantine Verte",
@@ -120,6 +121,20 @@ const featuredProject = {
 };
 
 const otherProjects = [
+  {
+    name: "Horloge-apprentissage",
+    description: [
+    "Application interactive pour apprendre à lire l'heure sur une horloge analogique",
+    "Mode quiz avec génération d'heures aléatoires et système de score",
+    "Contexte visuel adaptatif (couleurs et icônes selon le moment de la journée)",
+    "Interface ludique et responsive conçue pour les enfants"
+    ],
+    technologies: ["React", "TypeScript"],
+    image: horlogeApprentissage,
+    link: "https://horloge-apprentissage.netlify.app/",
+    github: "https://github.com/LamourMarine/horloge-apprentissage"
+  },
+
   {
     name: "Du Sol Au Plafond",
     description: [
