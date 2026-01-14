@@ -24,8 +24,10 @@
 
 <script lang="ts" setup>
 import vueLogo from '@/assets/Vue.js_Logo_2.svg.png'
+import reactLogo from '@/assets/react.png'
 import tsLogo from '@/assets/typescript.svg'
-import cssLogo from '@/assets/css3.png'
+import javaLogo from '@/assets/java.logo.png'
+import springBootLogo from '@/assets/java-spring-boot.png'
 import tailwindLogo from '@/assets/tailwind-css-logo-png_seeklogo-354675-removebg-preview.png'
 import phpLogo from '@/assets/kisspng-web-development-php-software-developer-web-applica-create-5ad11121794b05.5974879215236508494968-removebg-preview.png'
 import symfonyLogo from '@/assets/symfony-badge-icon-lg.png'
@@ -33,9 +35,11 @@ import mysqlLogo from '@/assets/images-removebg-preview.png'
 import postgresLogo from '@/assets/PostgreSQL-Logo.wine.png'
 
 const technologies = [
+  { name: 'Java', icon: javaLogo },
+  {name: 'Spring Boot', icon: springBootLogo },
+  {name: 'React', icon: reactLogo},
   { name: 'Vue.js', icon: vueLogo },
   { name: 'TypeScript', icon: tsLogo },
-  { name: 'CSS', icon: cssLogo },
   { name: 'Tailwind', icon: tailwindLogo },
   { name: 'PHP', icon: phpLogo },
   { name: 'Symfony', icon: symfonyLogo },

@@ -26,45 +26,52 @@
             </li>
           </ul>
 
-<div class="project-links">
-  <a :href="featuredProject.githubFront" target="_blank" rel="noopener noreferrer" class="link-button">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-    </svg>
-    Code Frontend
-  </a>
-  <a :href="featuredProject.githubBack" target="_blank" rel="noopener noreferrer" class="link-button">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-    </svg>
-    Code Backend
-  </a>
-  <a :href="featuredProject.link" target="_blank" rel="noopener noreferrer" class="link-button primary">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-      <polyline points="15 3 21 3 21 9"></polyline>
-      <line x1="10" y1="14" x2="21" y2="3"></line>
-    </svg>
-    Voir le site
-  </a>
-</div>        </div>
+          <div class="project-links">
+            <a :href="featuredProject.githubFront" target="_blank" rel="noopener noreferrer" class="link-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              Code Frontend
+            </a>
+            <a :href="featuredProject.githubBack" target="_blank" rel="noopener noreferrer" class="link-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              Code Backend
+            </a>
+            <a :href="featuredProject.link" target="_blank" rel="noopener noreferrer" class="link-button primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Voir le site
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Autres projets -->
     <h3 class="section-subtitle">Autres projets</h3>
     <div class="projects-grid">
-      <div
-        v-for="project in otherProjects"
-        :key="project.name"
-        class="project-wrapper"
-      >
+      <div v-for="project in otherProjects" :key="project.name" class="project-wrapper">
         <a :href="project.link" target="_blank" rel="noopener noreferrer" class="project-card">
           <img :src="project.image" :alt="project.name" class="card-image" />
         </a>
 
         <div class="project-info">
-          <h2 class="project-title">{{ project.name }}</h2>
+          <h2 class="project-title">{{ project.name }}
+          </h2>
+
+          <!-- Status (si présent) -->
+          <span v-if="project.status" class="project-status">
+            {{ project.status }}
+          </span>
+
 
           <div class="tech-badges">
             <span class="badge" v-for="tech in project.technologies" :key="tech">
@@ -72,20 +79,49 @@
             </span>
           </div>
 
+
           <ul class="project-desc">
             <li v-for="(item, index) in project.description" :key="index">
               {{ item }}
             </li>
           </ul>
 
+
           <div class="project-links">
-            <a v-if="project.github" :href="project.github" target="_blank" rel="noopener noreferrer" class="link-icon" title="Voir le code">
+            <!-- GitHub Frontend (si projet Full Stack) -->
+            <a v-if="project.githubFront" :href="project.githubFront" target="_blank" rel="noopener noreferrer"
+              class="link-button-small">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              <span>Frontend</span>
+            </a>
+
+            <!-- GitHub Backend (si projet Full Stack) -->
+            <a v-if="project.githubBack" :href="project.githubBack" target="_blank" rel="noopener noreferrer"
+              class="link-button-small">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              <span>Backend</span>
+            </a>
+
+            <!-- GitHub unique (si projet Frontend only) -->
+            <a v-else-if="project.github" :href="project.github" target="_blank" rel="noopener noreferrer"
+              class="link-icon" title="Voir le code">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
               </svg>
             </a>
-            <a :href="project.link" target="_blank" rel="noopener noreferrer" class="link-icon" title="Voir le site">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+            <!-- Voir le site -->
+            <a v-if="project.link" :href="project.link" target="_blank" rel="noopener noreferrer" class="link-icon"
+              title="Voir le site">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
@@ -103,6 +139,7 @@ import mockupPokedex from "@/assets/MockupPokedex.jpg";
 import duSolAuPlafond from "@/assets/Du_sol_au_plafond.png";
 import cantineVerte from "@/assets/Cantine_Verte.png";
 import horlogeApprentissage from "@/assets/Horloge-apprentissageQuiz.png";
+import schoolManagement from "@/assets/school-management.png";
 
 const featuredProject = {
   name: "Cantine Verte",
@@ -124,16 +161,32 @@ const otherProjects = [
   {
     name: "Horloge-apprentissage",
     description: [
-    "Application interactive pour apprendre à lire l'heure sur une horloge analogique",
-    "Mode quiz avec génération d'heures aléatoires et système de score",
-    "Contexte visuel adaptatif (couleurs et icônes selon le moment de la journée)",
-    "Interface ludique et responsive conçue pour les enfants"
+      "Application interactive pour apprendre à lire l'heure sur une horloge analogique",
+      "Mode quiz avec génération d'heures aléatoires et système de score",
+      "Contexte visuel adaptatif (couleurs et icônes selon le moment de la journée)",
+      "Interface ludique et responsive conçue pour les enfants"
     ],
     technologies: ["React", "TypeScript"],
     image: horlogeApprentissage,
     link: "https://horloge-apprentissage.netlify.app/",
     github: "https://github.com/LamourMarine/horloge-apprentissage"
   },
+
+  {
+    name: "School Management System",
+    description: [
+      "Application complète de gestion scolaire avec CRUD pour les étudiants, cours et notes",
+      "Interface moderne avec navigation multi-pages, notifications et dialogs de confirmation",
+      "Gestion des contraintes d'intégrité (validation avant suppression)",
+      "Architecture REST API avec Spring Boot et base de données PostgreSQL"
+    ],
+    technologies: ["React", "TypeScript", "Material-UI", "Spring Boot", "Java", "PostgreSQL"],
+    image: schoolManagement,
+    status: "En développement : Tests backend à venir",
+    githubFront: "https://github.com/LamourMarine/school-management-frontend",
+    githubBack: "https://github.com/LamourMarine/school-management-api"
+  },
+
 
   {
     name: "Du Sol Au Plafond",
@@ -284,6 +337,37 @@ const otherProjects = [
   font-weight: 500;
 }
 
+.link-icon.github-back {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.link-button-small {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* Espace entre l'icône et le texte */
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.link-button-small:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.link-button-small svg {
+  flex-shrink: 0;
+  /* Empêche l'icône de rétrécir */
+}
+
 /* ============ PROJECT LINKS ============ */
 .project-links {
   display: flex;
@@ -401,6 +485,14 @@ const otherProjects = [
   color: white;
 }
 
+.project-status {
+  display: inline-block;
+  color: #c7c7c7;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
 .project-desc {
   font-size: 0.95rem;
   color: #c7c7c7;
