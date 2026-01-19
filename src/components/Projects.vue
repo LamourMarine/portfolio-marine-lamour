@@ -67,12 +67,6 @@
           <h2 class="project-title">{{ project.name }}
           </h2>
 
-          <!-- Status (si présent) -->
-          <span v-if="project.status" class="project-status">
-            {{ project.status }}
-          </span>
-
-
           <div class="tech-badges">
             <span class="badge" v-for="tech in project.technologies" :key="tech">
               {{ tech }}
@@ -175,18 +169,17 @@ const otherProjects = [
   {
     name: "School Management System",
     description: [
-      "Application complète de gestion scolaire avec CRUD pour les étudiants, cours et notes",
-      "Interface moderne avec navigation multi-pages, notifications et dialogs de confirmation",
-      "Gestion des contraintes d'intégrité (validation avant suppression)",
-      "Architecture REST API avec Spring Boot et base de données PostgreSQL"
+      "Application full-stack de gestion scolaire avec authentification JWT et CRUD complet",
+      "Interface moderne avec Material-UI, notifications en temps réel et gestion des erreurs",
+      "Sécurisation des routes côté frontend et backend avec Spring Security",
+      "Architecture REST API avec Spring Boot, PostgreSQL et déploiement en production"
     ],
-    technologies: ["React", "TypeScript", "Material-UI", "Spring Boot", "Java", "PostgreSQL"],
+    technologies: ["React", "TypeScript", "Material-UI", "Spring Boot", "Java", "PostgreSQL", "JWT"],
     image: schoolManagement,
-    status: "En développement : Tests backend à venir",
+    link: "https://school-management-react.netlify.app/",
     githubFront: "https://github.com/LamourMarine/school-management-frontend",
-    githubBack: "https://github.com/LamourMarine/school-management-api"
+    githubBack: "https://github.com/LamourMarine/school-management-api"  
   },
-
 
   {
     name: "Du Sol Au Plafond",
