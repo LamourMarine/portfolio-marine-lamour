@@ -3,26 +3,26 @@
     <div class="home-center">
       <h1 class="home-headline">
         Développeuse
-        <span class="gradient-text">Full-Stack</span>
+        <span class="gradient-text">Backend</span>
       </h1>
 
-      <div class="home-intro">
-        <p>
-          Développeuse web full-stack spécialisée en React, TypeScript et Spring Boot, je 
-          conçois des applications complètes, de l'interface utilisateur à l'API REST et la 
-          gestion de bases de données. Mon approche technique rigoureuse et ma capacité à 
-          résoudre des problèmes complexes me permettent de livrer des solutions 
-          performantes et sécurisées.
-        </p>
+        <div class="home-intro">
+          <p>
+            Développeuse backend spécialisée en Java/Spring Boot et PHP/Symfony, je 
+            conçois des API REST robustes et des architectures logicielles performantes. 
+            Mon expertise couvre la gestion de bases de données relationnelles (PostgreSQL), 
+            l'authentification sécurisée (JWT), et le déploiement d'applications en production. 
+            Compétente également en React/TypeScript pour l'intégration frontend.
+          </p>
 
-        <p>
-          Organisée et méthodique, j'accorde une attention particulière à la qualité du 
-          code, à l'authentification sécurisée (JWT) et à l'architecture logicielle. Mes 
-          projets déployés en production témoignent de ma capacité à mener un projet de la 
-          conception au déploiement.
-        </p>
-      </div>
-
+          <p>
+            Rigoureuse et méthodique, j'accorde une attention particulière à la qualité du 
+            code, aux tests unitaires (JUnit, Mockito), et aux bonnes pratiques de développement. 
+            Mes projets déployés témoignent de ma capacité à concevoir des solutions backend 
+            complètes, de la modélisation des données au déploiement sur des environnements cloud.
+          </p>
+        </div>
+        
       <div class="home-cta">
         <a
           href="#"
