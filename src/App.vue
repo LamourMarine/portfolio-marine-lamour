@@ -18,7 +18,7 @@
         <div class="header-names-mobile">
           <h1><span>Marine</span> <span>Lamour</span></h1>
         </div>
-        <p class="tagline">Développeuse web et web mobile</p>
+        <p class="tagline">Développeuse Backend</p>
       </header>
 
       <aside class="sidebar" :class="{ open: mobileMenuOpen }">
@@ -26,7 +26,7 @@
           <div class="header-names">
             <h1><span>Marine</span> <span>Lamour</span></h1>
           </div>
-          <p class="tagline">Développeuse web et web mobile</p>
+          <p class="tagline">Développeuse Backend</p>
         </header>
         <Navbar
           :current-section="currentSection"
